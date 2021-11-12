@@ -1,0 +1,6 @@
+name: start_animation_widgets
+description: Template to start animation widget for Flutter
+vars:
+  - name
+  - duration
+  - curve
