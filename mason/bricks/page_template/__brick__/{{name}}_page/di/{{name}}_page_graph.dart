@@ -1,4 +1,4 @@
-import 'package:client_app/core/controllers/{{name}}_controller.dart';
+import 'package:client_app/core/controllers/{{controller}}_controller.dart';
 import 'package:client_app/core/di/injectable_widget.dart';
 import 'package:client_app/core/redux/states/app_state/app_state.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
@@ -9,7 +9,7 @@ import '../{{name}}_page.dart';
 import '../{{name}}_page_action_mapper.dart';
 
 class {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph extends Graph<{{#pascalCase}}{{name}}{{/pascalCase}}Page> {
-  BookPageGraph([Injector injector]) : super(injector);
+  {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph([Injector injector]) : super(injector);
 
   // Inside this method, we inject the {{#pascalCase}}{{name}}{{/pascalCase}}Page dependencies from injector to the instance
   @override
@@ -17,7 +17,7 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph extends Graph<{{#pascalCas
     subject.store = getDependency<Store<AppState>>();
     subject.colorPalette = getDependency<ColorPalette>();
     subject.actionMapper = getDependency<{{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper>();
-    subject.{{controller}}Controller =  getDependency<{{controller}}Controller>();
+    subject.{{controller}}Controller =  getDependency<{{#pascalCase}}{{controller}}{{/pascalCase}}Controller>();
   }
 
   // Inside this method, we register all the {{#pascalCase}}{{name}}{{/pascalCase}}Page dependencies:

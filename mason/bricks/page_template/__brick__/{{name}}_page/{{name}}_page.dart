@@ -7,7 +7,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:client_app/core/utils/utils.dart';
 
-import 'di/{{name}}_page_action_mapper.dart';
+import 'di/{{name}}_page_graph.dart';
 import '{{name}}_page_action_mapper.dart';
 
 
