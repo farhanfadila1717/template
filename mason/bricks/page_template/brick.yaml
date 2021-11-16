@@ -1,0 +1,5 @@
+name: page_template
+description: Create page tamplate
+vars:
+  - name
+  - controller

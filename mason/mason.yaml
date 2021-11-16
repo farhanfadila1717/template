@@ -3,3 +3,5 @@ bricks:
     path: bricks/hello
   start_animation_widgets:
     path: bricks/start_animation_widgets
+  page_template:
+    path: bricks\page_template
