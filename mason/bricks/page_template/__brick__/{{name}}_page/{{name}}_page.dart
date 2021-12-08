@@ -3,7 +3,6 @@ import 'package:client_app/core/di/injectable_widget.dart';
 import 'package:client_app/core/redux/states/app_state/app_state.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:client_app/core/utils/utils.dart';
 
