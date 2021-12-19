@@ -5,3 +5,5 @@ bricks:
     path: bricks/start_animation_widgets
   page_template:
     path: bricks\page_template
+  page_template_ns:
+    path: bricks/page_template_ns
