@@ -1,4 +1,3 @@
-import 'package:client_app/core/controllers/{{controller}}_controller.dart';
 import 'package:client_app/core/di/injectable_widget.dart';
 import 'package:client_app/core/redux/states/app_state/app_state.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
@@ -14,20 +13,19 @@ import '{{name}}_page_action_mapper.dart';
 class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with InjectableWidget {
   final {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph _graph;
 
-
+  // injected
   ColorPalette colorPalette;
 
-
+  // injected
   {{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper actionMapper;
 
+  // injected
   Store<AppState> store;
 
-  {{#pascalCase}}{{controller}}{{/pascalCase}}Controller {{#snakeCase}}{{controller}}{{/snakeCase}}Controller;
 
   @override
   {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph() => _graph;
 
-  //injected
   {{#pascalCase}}{{name}}{{/pascalCase}}Page([graph])
       : this._graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph() {
     setup();

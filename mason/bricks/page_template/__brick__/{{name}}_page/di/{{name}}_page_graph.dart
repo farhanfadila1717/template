@@ -1,4 +1,3 @@
-import 'package:client_app/core/controllers/{{controller}}_controller.dart';
 import 'package:client_app/core/di/injectable_widget.dart';
 import 'package:client_app/core/redux/states/app_state/app_state.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
@@ -17,7 +16,6 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph extends Graph<{{#pascalCas
     subject.store = getDependency<Store<AppState>>();
     subject.colorPalette = getDependency<ColorPalette>();
     subject.actionMapper = getDependency<{{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper>();
-    subject.{{controller}}Controller =  getDependency<{{#pascalCase}}{{controller}}{{/pascalCase}}Controller>();
   }
 
   // Inside this method, we register all the {{#pascalCase}}{{name}}{{/pascalCase}}Page dependencies:
