@@ -1,5 +1,0 @@
-name: page_template_ns
-description: A new brick created with the Mason CLI.
-vars:
-  - name
-  - controller
