@@ -21,6 +21,6 @@ environment:
 vars:
   name:
     type: string
-    description: Your name
+    description: Page name
     default: Home
     prompt: Page name?

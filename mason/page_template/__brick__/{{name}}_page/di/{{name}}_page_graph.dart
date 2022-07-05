@@ -1,3 +1,4 @@
+import 'package:client_app/core/analytics/analytics.dart';
 import 'package:client_app/core/di/injectable_widget.dart';
 import 'package:client_app/core/redux/states/app_state/app_state.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
@@ -13,7 +14,7 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph extends Graph<{{#pascalCas
   // Inside this method, we inject the {{#pascalCase}}{{name}}{{/pascalCase}}Page dependencies from injector to the instance
   @override
   void inject({{#pascalCase}}{{name}}{{/pascalCase}}Page subject) {
-    subject.store = getDependency<Store<AppState>>();
+    subject.analytics = getDependency<Analytics>();
     subject.colorPalette = getDependency<ColorPalette>();
     subject.actionMapper = getDependency<{{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper>();
   }

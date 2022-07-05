@@ -1,5 +1,5 @@
+import 'package:client_app/core/analytics/analytics.dart';
 import 'package:client_app/core/di/injectable_widget.dart';
-import 'package:client_app/core/redux/states/app_state/app_state.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
@@ -13,14 +13,14 @@ import '{{name}}_page_action_mapper.dart';
 class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with InjectableWidget {
   final {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph _graph;
 
-  // injected
+  //injected
+  Analytics analytics;
+
+  //injected
   ColorPalette colorPalette;
 
   // injected
   {{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper actionMapper;
-
-  // injected
-  Store<AppState> store;
 
 
   @override
