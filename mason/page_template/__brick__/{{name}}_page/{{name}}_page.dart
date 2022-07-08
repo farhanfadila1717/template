@@ -28,8 +28,8 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with Inj
   {{#pascalCase}}{{name}}{{/pascalCase}}Page({
     Key key,
     {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph,
-  })
-      : this._graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph() {
+  }) : this._graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph(),
+        super(key: key) {
     setup();
   }
 

@@ -1,2 +1,2 @@
-# 0.1.0+3
-* Fixed optional parameter
+# 0.1.0+4
+* Fixed super contstructor
