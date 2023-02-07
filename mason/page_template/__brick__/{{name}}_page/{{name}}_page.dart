@@ -26,15 +26,14 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with Inj
   {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph() => _graph;
 
   {{#pascalCase}}{{name}}{{/pascalCase}}Page({
-    Key key,
+    super.key,
     {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph,
-  }) : this._graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph(),
-        super(key: key) {
+  }) : this._graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph() {
     setup();
   }
 
   @override
-  createState() => _{{#pascalCase}}{{name}}{{/pascalCase}}PageState();
+  _{{#pascalCase}}{{name}}{{/pascalCase}}PageState()  createState() => _{{#pascalCase}}{{name}}{{/pascalCase}}PageState();
 }
 
 class _{{#pascalCase}}{{name}}{{/pascalCase}}PageState extends State<{{#pascalCase}}{{name}}{{/pascalCase}}Page> {
