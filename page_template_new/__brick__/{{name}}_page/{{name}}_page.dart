@@ -2,7 +2,6 @@ import 'package:client_app/core/analytics/analytics.dart';
 import 'package:client_app/core/di/injectable_widget.dart';
 import 'package:client_app/ui/utils/color_palette.dart';
 import 'package:flutter/material.dart';
-import 'package:redux/redux.dart';
 
 import 'di/{{name}}_page_graph.dart';
 import '{{name}}_page_action_mapper.dart';
@@ -13,27 +12,26 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with Inj
   final {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph _graph;
 
   //injected
-  Analytics analytics;
+  late Analytics analytics;
 
   //injected
-  ColorPalette colorPalette;
+  late ColorPalette colorPalette;
 
-  // injected
+  //injected
   {{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper actionMapper;
-
 
   @override
   {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph() => _graph;
 
   {{#pascalCase}}{{name}}{{/pascalCase}}Page({
     super.key,
-    {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph,
-  }) : this._graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph() {
+    {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph? graph,
+  }) : _graph = graph ?? {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph() {
     setup();
   }
 
   @override
-  _{{#pascalCase}}{{name}}{{/pascalCase}}PageState()  createState() => _{{#pascalCase}}{{name}}{{/pascalCase}}PageState();
+  _{{#pascalCase}}{{name}}{{/pascalCase}}PageState  createState() => _{{#pascalCase}}{{name}}{{/pascalCase}}PageState();
 }
 
 class _{{#pascalCase}}{{name}}{{/pascalCase}}PageState extends State<{{#pascalCase}}{{name}}{{/pascalCase}}Page> {
