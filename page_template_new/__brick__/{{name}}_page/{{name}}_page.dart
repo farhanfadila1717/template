@@ -12,13 +12,15 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with Inj
   final {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph _graph;
 
   //injected
-  late Analytics analytics;
+  late final Analytics analytics;
 
   //injected
-  late ColorPalette colorPalette;
+  late final ColorPalette colorPalette;
 
   //injected
-  {{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper actionMapper;
+  late final {{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper actionMapper;
+
+  static const name = {{name}};
 
   @override
   {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph() => _graph;
