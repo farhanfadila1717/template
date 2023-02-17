@@ -1,3 +1,6 @@
+# 0.1.0+4
+- Fix page name
+
 # 0.1.0+3
 - mark depedencies as late final 
 

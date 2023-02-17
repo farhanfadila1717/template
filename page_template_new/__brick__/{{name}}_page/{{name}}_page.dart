@@ -20,7 +20,7 @@ class {{#pascalCase}}{{name}}{{/pascalCase}}Page extends StatefulWidget with Inj
   //injected
   late final {{#pascalCase}}{{name}}{{/pascalCase}}PageActionMapper actionMapper;
 
-  static const name = {{name}};
+  static const name = '{{name}}';
 
   @override
   {{#pascalCase}}{{name}}{{/pascalCase}}PageGraph graph() => _graph;
